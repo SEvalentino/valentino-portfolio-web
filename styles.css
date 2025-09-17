@@ -1,0 +1,28 @@
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+:root{--bg:#0b0f14;--card:#111826;--muted:#93a3b8;--text:#e6edf3;--accent:#61dafb;--primary:#7c5cff;--stroke:#1e2637}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:linear-gradient(180deg,#0b0f14 0%,#0b0f14 60%,#0f1522 100%);color:var(--text)}
+.container{max-width:1000px;margin:0 auto;padding:24px}
+.head{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:14px}
+.logo{width:40px;height:40px;border-radius:12px;background:var(--primary);display:grid;place-items:center;font-weight:800;color:#fff}
+.subtitle{color:var(--muted);margin-top:4px}
+nav a{color:var(--text);text-decoration:none;margin-left:16px;opacity:.85}
+nav a:hover{opacity:1}
+.hero{padding-top:20px;padding-bottom:6px}
+.hero h2{font-size:34px;line-height:1.2;margin:0 0 12px}
+.accent{color:var(--accent)}
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+.badge{padding:6px 10px;border:1px solid var(--stroke);border-radius:999px;color:var(--muted);font-size:12px}
+.btn{padding:10px 14px;border-radius:10px;border:1px solid var(--stroke);text-decoration:none;color:var(--text);display:inline-block}
+.btn.primary{background:var(--primary);border-color:var(--primary);color:#fff}
+.btn.ghost:hover{background:#151b2b}
+.card{background:var(--card);border:1px solid var(--stroke);border-radius:16px;padding:20px;margin:18px 0}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.list{margin:8px 0 0 18px}
+.proj .meta{margin:10px 0 0 18px;color:var(--muted);font-size:14px}
+.timeline{display:grid;gap:18px;border-left:2px solid var(--stroke);padding-left:16px}
+.timeline .item{display:flex;gap:12px;position:relative}
+.timeline .dot{width:10px;height:10px;border-radius:50%;background:var(--primary);position:absolute;left:-21px;top:7px}
+.links{display:flex;gap:10px;flex-wrap:wrap}
+.foot{color:var(--muted);text-align:center;margin-bottom:20px}
+@media(max-width:900px){.grid-3{grid-template-columns:1fr}.head{flex-direction:column;align-items:flex-start}.hero h2{font-size:28px}}

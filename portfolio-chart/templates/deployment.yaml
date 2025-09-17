@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}
+  labels:
+    app: {{ .Release.Name }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}
+    spec:
+      containers:
+      - name: {{ .Release.Name }}
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        ports:
+        - containerPort: {{ .Values.containerPort }}
+        env:
+        - name: DB_HOST
+          value: {{ .Values.env.DB_HOST | quote }}
+        - name: DB_USER
+          value: {{ .Values.env.DB_USER | quote }}
+        - name: DB_PASS
+          value: {{ .Values.env.DB_PASS | quote }}
+        - name: DB_NAME
+          value: {{ .Values.env.DB_NAME | quote }}

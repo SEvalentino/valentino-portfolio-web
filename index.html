@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Valentino Ibrahim — DevOps/Cloud Engineer</title>
+  <meta name="description" content="Portfolio Valentino Ibrahim — DevOps/Cloud Engineer | GCP, Kubernetes, CI/CD, Observability.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/rocket.png">
+</head>
+<body>
+<header class="container head">
+  <div class="brand">
+    <div class="logo">VI</div>
+    <div>
+      <h1>Valentino Ibrahim</h1>
+      <p class="subtitle">DevOps / Cloud Engineer • Jakarta</p>
+    </div>
+  </div>
+  <nav>
+    <a href="#about">Tentang</a>
+    <a href="#skills">Keahlian</a>
+    <a href="#projects">Projek</a>
+    <a href="#experience">Pengalaman</a>
+    <a href="#contact" class="btn">Kontak</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero container">
+    <div class="hero-text">
+      <h2>Membangun sistem yang <span class="accent">stabil</span>, <span class="accent">aman</span>, dan <span class="accent">terukur</span>.</h2>
+      <p>Saya fokus pada infrastruktur di <strong>Google Cloud Platform</strong>, <strong>Kubernetes</strong>, dan <strong>CI/CD</strong>. 
+      Portfolio ini menunjukkan praktik nyata: <em>GKE standard</em>, <em>Jenkins pipeline</em>, <em>SonarQube Quality Gate</em>, dan <em>Cloud SQL</em>.</p>
+      <div class="badges">
+        <span class="badge">GCP</span>
+        <span class="badge">Kubernetes</span>
+        <span class="badge">Jenkins</span>
+        <span class="badge">SonarQube</span>
+        <span class="badge">Terraform (coming soon)</span>
+      </div>
+      <div class="cta">
+        <a href="#projects" class="btn primary">Lihat Projek</a>
+        <a href="#contact" class="btn ghost">Hubungi Saya</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="container card">
+    <h3>Tentang Saya</h3>
+    <p>DevOps / Cloud Engineer dengan pengalaman membangun pipeline CI/CD, observability, dan automasi infrastruktur. 
+    Saat ini mengerjakan <strong>Portfolio Project di GCP selama 15 hari</strong> sebagai demonstrasi end-to-end: VM, GKE, SonarQube, Jenkins, Helm, Cloud SQL, BigQuery, dan Monitoring.</p>
+    <ul class="list">
+      <li>Fokus: Reliability, Security by default, Cost-awareness.</li>
+      <li>Kompetensi tambahan: Linux, Docker, GitHub Actions, Nginx, ELK.</li>
+      <li>Pendidikan/Pengembangan: Google Cybersecurity Certificate.</li>
+    </ul>
+  </section>
+
+  <section id="skills" class="container grid-3">
+    <div class="card">
+      <h4>Cloud & Container</h4>
+      <ul class="list">
+        <li>GCP: Compute, GKE, Cloud SQL, Artifact Registry, Cloud Storage</li>
+        <li>Kubernetes: Helm, Ingress/Service, Rollout & Rollback</li>
+        <li>Docker & Compose, Image hardening dasar</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>CI/CD & Quality</h4>
+      <ul class="list">
+        <li>Jenkins pipeline: build → scan → push → deploy</li>
+        <li>SonarQube: Quality Gate, code smells & vulnerabilities</li>
+        <li>Git branching & PR checks</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Observability & Ops</h4>
+      <ul class="list">
+        <li>Cloud Monitoring & Logging</li>
+        <li>Alerting policy (CPU, pod crash, DB connections)</li>
+        <li>Backup & restore ke Cloud Storage</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects" class="container">
+    <h3>Projek Terpilih</h3>
+    <div class="grid-3">
+      <article class="card proj">
+        <h4>Portfolio GCP (15 hari)</h4>
+        <p>Aplikasi statis → lalu <strong>web + DB</strong> di GKE. CI/CD Jenkins, Helm, SonarQube. 
+        Rollback cepat dan monitoring terintegrasi.</p>
+        <ul class="meta">
+          <li>Stack: GKE, Jenkins, SonarQube, Cloud SQL</li>
+          <li>Result: Zero-downtime rollout + Quality Gate</li>
+        </ul>
+      </article>
+      <article class="card proj">
+        <h4>Logging & Alerting</h4>
+        <p>Menyiapkan dasbor gabungan VM, GKE, Cloud SQL; alert email untuk anomali performa.</p>
+        <ul class="meta">
+          <li>Stack: Cloud Monitoring & Logging</li>
+          <li>KPI: MTTR lebih cepat dengan alert terukur</li>
+        </ul>
+      </article>
+      <article class="card proj">
+        <h4>Security Baseline</h4>
+        <p>Quality Gate, dependency check, dan best practice image untuk mencegah issue saat build.</p>
+        <ul class="meta">
+          <li>Stack: SonarQube, Docker</li>
+          <li>Outcome: Build gagal bila gate tidak lolos</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="experience" class="container card">
+    <h3>Pengalaman Singkat</h3>
+    <div class="timeline">
+      <div class="item">
+        <div class="dot"></div>
+        <div>
+          <strong>DevOps / Cloud Engineer</strong> — fokus CI/CD & Kubernetes
+          <div class="muted">2023 – Sekarang</div>
+          <div>Membangun pipeline, observability, dan reliability untuk aplikasi internal.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="dot"></div>
+        <div>
+          <strong>SRE / System Engineering</strong> — Linux, jaringan, otomatisasi
+          <div class="muted">Sebelumnya</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="container card">
+    <h3>Kontak</h3>
+    <p>Saya terbuka untuk diskusi peluang kerja, konsultasi, dan kolaborasi.</p>
+    <div class="links">
+      <a class="btn primary" href="mailto:valentino@example.com">Email</a>
+      <a class="btn ghost" href="https://github.com/SEvalentino" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn ghost" href="#" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </section>
+</main>
+
+<footer class="container foot">
+  © <span id="year"></span> Valentino Ibrahim — Dibangun di GCP (GKE + Jenkins + Helm)
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

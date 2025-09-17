@@ -1,0 +1,40 @@
+replicaCount: 2
+
+image:
+  repository: asia-southeast1-docker.pkg.dev/valentino-project-471103/portfolio-repo/valentino-portfolio
+  pullPolicy: IfNotPresent
+  tag: "latest"
+
+# service.port dipakai oleh beberapa template (termasuk test bawaan)
+service:
+  type: LoadBalancer
+  port: 80
+
+# container port app Node.js
+containerPort: 80
+
+# env untuk koneksi DB (sementara via public IP)
+env:
+  DB_HOST: "10.0.0.2"
+  DB_USER: "postgres"
+  DB_PASS: "#Myompung123"
+  DB_NAME: "portfolio"
+
+# default bawaan agar template lain tidak error
+serviceAccount:
+  create: false
+  name: ""
+  automount: true
+
+autoscaling:
+  enabled: false
+ingress:
+  enabled: false
+imagePullSecrets: []
+podAnnotations: {}
+resources: {}
+podSecurityContext: {}
+securityContext: {}
+tolerations: []
+affinity: {}
+nodeSelector: {}

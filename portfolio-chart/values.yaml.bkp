@@ -1,0 +1,31 @@
+replicaCount: 2
+
+image:
+  repository: asia-southeast1-docker.pkg.dev/valentino-project-471103/portfolio-repo/portfolio-app
+  pullPolicy: IfNotPresent
+  tag: "latest"
+
+service:
+  type: LoadBalancer
+  port: 80
+
+# ==== tambahkan default agar template tidak error ====
+serviceAccount:
+  create: false        # kita tidak butuh SA khusus untuk app sederhana
+  name: ""
+  automount: true
+
+autoscaling:
+  enabled: false
+
+ingress:
+  enabled: false
+
+imagePullSecrets: []
+podAnnotations: {}
+resources: {}
+podSecurityContext: {}
+securityContext: {}
+tolerations: []
+affinity: {}
+nodeSelector: {}
