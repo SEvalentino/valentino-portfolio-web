@@ -29,7 +29,7 @@ pipeline {
               def scannerHome = tool 'sonar-scanner'
               sh """
                 ${scannerHome}/bin/sonar-scanner \
-                  -Dsonar.login=${SONAR_TOKEN}
+                  -Dsonar.token=${SONAR_TOKEN}
               """
             }
           }
