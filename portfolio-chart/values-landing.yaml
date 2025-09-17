@@ -1,0 +1,16 @@
+replicaCount: 2
+
+image:
+  repository: asia-southeast1-docker.pkg.dev/valentino-project-471103/portfolio-repo/valentino-portfolio
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+service:
+  type: LoadBalancer
+  port: 80
+
+containerPort: 80
+
+resources: {}
+autoscaling:
+  enabled: false
