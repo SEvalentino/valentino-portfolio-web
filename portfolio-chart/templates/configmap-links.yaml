@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-links
+data:
+  config.json: |
+    {
+      "jenkinsUrl": {{ .Values.links.jenkinsUrl | quote }},
+      "sonarUrl":   {{ .Values.links.sonarUrl   | quote }},
+      "monitorUrl": {{ .Values.links.monitorUrl | quote }}
+    }
+

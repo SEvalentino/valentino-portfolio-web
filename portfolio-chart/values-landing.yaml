@@ -11,6 +11,12 @@ service:
 
 containerPort: 80
 
+links:
+  jenkinsUrl:   "http://34.101.98.8:8080"
+  sonarUrl:     "http://35.240.191.131:9000"
+  monitorUrl:   "https://console.cloud.google.com/monitoring/dashboards?project=valentino-project-471103"
+
+
 resources: {}
 autoscaling:
   enabled: false

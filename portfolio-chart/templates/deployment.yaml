@@ -19,6 +19,10 @@ spec:
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         ports:
         - containerPort: {{ .Values.containerPort }}
+        volumeMounts:
+        - name: links-config
+          mountPath: /usr/share/nginx/html/config.json
+          subPath: config.json
         env:
         - name: DB_HOST
           value: {{ .Values.env.DB_HOST | quote }}
@@ -28,3 +32,7 @@ spec:
           value: {{ .Values.env.DB_PASS | quote }}
         - name: DB_NAME
           value: {{ .Values.env.DB_NAME | quote }}
+      volumes:
+      - name: links-config
+        configMap:
+          name: {{ .Release.Name }}-links

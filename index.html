@@ -147,6 +147,16 @@
       <a class="btn ghost" href="#" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </section>
+  <section class="container card">
+    <h3>Ops Console</h3>
+    <p>Shortcut ke tool yang dipakai di portfolio ini:</p>
+    <div class="links">
+      <a id="btn-jenkins"   class="btn primary" target="_blank" rel="noopener">Jenkins</a>
+      <a id="btn-sonar"     class="btn ghost"   target="_blank" rel="noopener">SonarQube</a>
+      <a id="btn-monitor"   class="btn ghost"   target="_blank" rel="noopener">Monitoring</a>
+    </div>
+    <small class="muted">Link dikonfigurasi via Helm → <code>config.json</code>.</small>
+  </section>
 </main>
 
 <footer class="container foot">
@@ -155,6 +165,23 @@
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+<script>
+  // Ambil konfigurasi link dari file statis yang dibuat Helm
+  fetch('config.json', {cache: 'no-store'})
+    .then(r => r.json())
+    .then(cfg => {
+      if (cfg.jenkinsUrl)   document.getElementById('btn-jenkins').href = cfg.jenkinsUrl;
+      if (cfg.sonarUrl)     document.getElementById('btn-sonar').href   = cfg.sonarUrl;
+      if (cfg.monitorUrl)   document.getElementById('btn-monitor').href = cfg.monitorUrl;
+    })
+    .catch(() => {
+      // fallback: sembunyikan tombol kalau config belum ada
+      ['btn-jenkins','btn-sonar','btn-monitor'].forEach(id=>{
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+    });
 </script>
 </body>
 </html>
